@@ -76,8 +76,9 @@ class Database {
                     break;
                 case "update":
                     try {
-                        /*for ($i = 0; $i < count($data_array); $i++) {
-                            $index = (int)substr($data_array["data"][$i]["id"],3);
+                        for ($i = 0; $i < count($data_array["data"]); $i++) {
+                            $str = $data_array["data"][$i]["id"];
+                            $index = (int)substr($str,3, strlen($str));
                             $this->data["contacts"][$index]["name"] = $data_array["data"][$i]["name"];
                             $this->data["contacts"][$index]["lastname"] = $data_array["data"][$i]["lastname"];
                             $this->data["contacts"][$index]["phone"] = $data_array["data"][$i]["phone"];
@@ -85,15 +86,14 @@ class Database {
                             $this->data["contacts"][$index]["email"] = $data_array["data"][$i]["email"];
                             $this->data["contacts"][$index]["address"] = $data_array["data"][$i]["address"];
                             $this->data["contacts"][$index]["birthday"] = $data_array["data"][$i]["birthday"];
-                        }*/
+                        }
                         //Abre el archivo json en modo escritura
                         $file = fopen("../db/data.json", 'w') or die("Error al abrir el archivo");
                         //Almacena la matriz data en formato json
-                        //JSON_UNESCAPED_UNICODE -> Evita que se conviertan los caracteres especiales y los deja en UTF-8
                         fwrite($file, json_encode($this->data));
                         fclose($file);
                         
-                        $response = (int)substr($data_array["data"][0]["id"],3);
+                        $response = "La actualizacion se ha realizado correctamente";
                     } catch (Exception $exc) {
                         $response = $exc->getTraceAsString();
                     }

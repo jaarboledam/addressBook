@@ -6,7 +6,6 @@ $(document).ready(function () {
     /*se ejecuta cuando se hace submit desde cualquier form*/
     $("form").submit(function (e) {
         e.preventDefault();
-
         var frmName = $(this).attr('name');
         var form = $("form[name=" + frmName + "]");
         var action = $(this).attr('action');
@@ -15,11 +14,12 @@ $(document).ready(function () {
 
         executeAjax(form, action, method, loading);
     });
-
+    
+    //Pone el foco sobre el nodo input hermano al radio seleccionado
     $("input[type=radio]").click(function(){
         $(this).siblings('.search-box').focus();
     });
-    
+    //Si el input obtiene el foco, pone checked el radio hermano
     $(".search-box").on('focus',function (){
         if ($(this).val() === ""){
             $(".search-box").val("");
@@ -105,10 +105,6 @@ $(document).ready(function () {
         //console.log(JSON.stringify(table_data));
         saveChanges(JSON.stringify(table_data));
     });
-
-    $(".cancel-table").click(function (){
-        console.log("Cancelar");
-    });
 });
 
 /*Recibe por parametro el value de la propiedad href
@@ -148,10 +144,10 @@ function executeAjax(form, action, method, loading) {
         }
     });
 };
+var global_keys;//almacena las llaves del archivo JSON
 
 /*Recibe el objeto formulario que ejecuta la funcion de ajax
  * y la respuesta de success*/
-var global_keys;//almacena las llaves del archivo JSON
 function ajaxResponse(form,response) {
     switch (form.attr('name')) {
         case "frmLogin":
@@ -195,7 +191,6 @@ function ajaxResponse(form,response) {
             }
             break;
         case "frmUpdateContact":
-            console.log(response);
             var found = jQuery.parseJSON(response);
             if (found.length > 0) {
                 var keys;
@@ -240,12 +235,12 @@ function saveChanges(data){
         url: "/mvc_project1/controller/main.controller.php",
         data: "form=frmExecUpdate&data="+data,
         success: function (response) {
-            console.log(response);
             setTimeout(function(){
                 $(".save-table").html("<i class='fa fa-check' style='color:green;'></i>");
                 setTimeout(function (){
-                   $(".save-table").html(btn_default); 
+                   $(".save-table").html(btn_default);
                 }, 2000);
+                alert(response);
             }, 500);
         },
         error: function (textStatus, errorThrown) {

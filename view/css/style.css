@@ -83,8 +83,20 @@ button{
 #login-left{
     /*Div-izquierda*/
     left: 5px;
+    width: 10%;
+    min-width: 100px;
     background-image: url('/mvc_project1/view/img/fondo.png');
     box-shadow: 30px 0px 50px -15px black;
+}
+.project-title{
+    position: absolute;
+    bottom: 0px;
+    margin: auto;
+    border: 1px solid yellow;
+    box-sizing: border-box;
+    font-family: 'Kaushan Script', cursive;
+    -webkit-transform: rotate(-90deg);
+    transform: rotate(-90deg);
 }
 #login-right{
     /*Div-Derecha*/
@@ -108,28 +120,13 @@ button{
     box-shadow: 0px 10px 25px 0px black;
 }
 #login-title{
-    /*Titulo 'Login' del formulario*/
+    /*Titulo 'Iniciar Sesion' del formulario*/
     background-image: url('/mvc_project1/view/img/fondo.png');
     font-family: 'Kaushan Script', cursive;
     font-weight: bolder;
     margin: 0;
     margin-bottom: 40px;
     padding: 10px;
-}
-
-#login-logo{
-    /*Div anidado en la seccion izquierda que contiene el titulo*/
-    font-family: 'Kaushan Script', cursive;
-    background-image: url('/mvc_project1/view/img/Contacts.png');
-    background-repeat: no-repeat;
-    background-size: 100%;
-    font-size: 550%;
-    text-shadow: 2px 2px 15px white;
-    text-align: center;
-    margin: auto;
-    margin-top: 50px;
-    width: 80%;
-    height: 80%;
 }
 #btnLogin{
     background-color: #E76117;
@@ -349,10 +346,6 @@ td.radio-select{
 }
 .save-table:hover{
     color: green;
-    cursor: pointer;
-}
-.cancel-table:hover{
-    color: blue;
     cursor: pointer;
 }
 /*---------Fin estilos---------*/

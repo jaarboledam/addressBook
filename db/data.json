@@ -1,1 +1,1 @@
-{"users":[{"usr":"admin","pwd":"123"}],"contacts":[{"id":"cnt0","name":"w","lastname":"asd","phone":"000","mobile":"","email":"","address":"","birthday":""}]}
+{"users":[{"usr":"admin","pwd":"123"}],"contacts":[{"id":"cnt0","name":"w1","lastname":"sdfsdf","phone":"000111","mobile":"","email":"","address":"","birthday":""},{"id":"cnt1","name":"w2","lastname":"aaaa","phone":"234234","mobile":"","email":"","address":"","birthday":""}]}
