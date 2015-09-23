@@ -20,7 +20,6 @@
     <ul class="form-list toolbar">
         <li class="close-table" id="edit-close"><i class="fa fa-times-circle"></i>Cerrar</li>
         <li class="save-table"><i class="fa fa-floppy-o"></i>Guardar</li>
-        <li class="cancel-table"><i class="fa fa-ban"></i>Cancelar</li>
     </ul>
 </nav>
 <div class="result-view" id="edit-view">

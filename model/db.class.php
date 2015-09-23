@@ -93,7 +93,7 @@ class Database {
                         fwrite($file, json_encode($this->data));
                         fclose($file);
                         
-                        $response = "ok";
+                        $response = "La actualizacion se ha realizado correctamente";
                     } catch (Exception $exc) {
                         $response = $exc->getTraceAsString();
                     }

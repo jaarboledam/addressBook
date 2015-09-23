@@ -105,10 +105,6 @@ $(document).ready(function () {
         //console.log(JSON.stringify(table_data));
         saveChanges(JSON.stringify(table_data));
     });
-
-    $(".cancel-table").click(function (){
-        console.log("Cancelar");
-    });
 });
 
 /*Recibe por parametro el value de la propiedad href
@@ -195,7 +191,6 @@ function ajaxResponse(form,response) {
             }
             break;
         case "frmUpdateContact":
-            console.log(response);
             var found = jQuery.parseJSON(response);
             if (found.length > 0) {
                 var keys;
@@ -240,12 +235,12 @@ function saveChanges(data){
         url: "/mvc_project1/controller/main.controller.php",
         data: "form=frmExecUpdate&data="+data,
         success: function (response) {
-            console.log(response);
             setTimeout(function(){
                 $(".save-table").html("<i class='fa fa-check' style='color:green;'></i>");
                 setTimeout(function (){
-                   $(".save-table").html(btn_default); 
+                   $(".save-table").html(btn_default);
                 }, 2000);
+                alert(response);
             }, 500);
         },
         error: function (textStatus, errorThrown) {

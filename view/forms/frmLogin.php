@@ -1,9 +1,7 @@
 <?php include 'layout.php'; ?>
 <body id="login">
     <div class="login-panel" id="login-left">
-        <div id="login-logo">
-            Address Book
-        </div>
+        <h1 class="project-title">Address Book</h1>
     </div>
     <div class="login-panel" id="login-right">
         <form id="login-form" name="frmLogin" action="/mvc_project1/controller/login.controller.php" method="POST">
