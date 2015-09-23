@@ -6,7 +6,6 @@ $(document).ready(function () {
     /*se ejecuta cuando se hace submit desde cualquier form*/
     $("form").submit(function (e) {
         e.preventDefault();
-
         var frmName = $(this).attr('name');
         var form = $("form[name=" + frmName + "]");
         var action = $(this).attr('action');
@@ -15,11 +14,12 @@ $(document).ready(function () {
 
         executeAjax(form, action, method, loading);
     });
-
+    
+    //Pone el foco sobre el nodo input hermano al radio seleccionado
     $("input[type=radio]").click(function(){
         $(this).siblings('.search-box').focus();
     });
-    
+    //Si el input obtiene el foco, pone checked el radio hermano
     $(".search-box").on('focus',function (){
         if ($(this).val() === ""){
             $(".search-box").val("");
@@ -148,10 +148,10 @@ function executeAjax(form, action, method, loading) {
         }
     });
 };
+var global_keys;//almacena las llaves del archivo JSON
 
 /*Recibe el objeto formulario que ejecuta la funcion de ajax
  * y la respuesta de success*/
-var global_keys;//almacena las llaves del archivo JSON
 function ajaxResponse(form,response) {
     switch (form.attr('name')) {
         case "frmLogin":
