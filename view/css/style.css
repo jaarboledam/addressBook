@@ -6,9 +6,12 @@
 }
 
 /*---------Estilo General---------*/
+*{
+    margin: 0;
+    padding: 0;
+}
 .form-list{
     list-style: none;
-    padding: 0;
 }
 .txt-field{
     /*Estilo general para los campos de texto*/
@@ -52,7 +55,7 @@ button{
     outline: 0;
 }
 .msgBox{
-    background-image: url('/mvc_project1/view/img/box-error.png');
+    background-image: url('/addressBook/view/img/box-error.png');
     margin: auto;
     width: 300px;
     padding-top: 10px;
@@ -69,51 +72,28 @@ button{
 
 /*---------Estilo para frmLogin.php---------*/
 /*body del archivo frmLogin.php*/
-#login{
+body#login{
     display: none;
-    background-color: #eee;
-    font-family: 'Kaushan Script', cursive;
 }
-.login-panel{
-    /*Divs que dividen el index en 2 partes verticales*/
-    position: absolute;
-    top: 5px; bottom: 5px;
-    width: 50%;
-}
-#login-left{
-    /*Div-izquierda*/
-    left: 5px;
-    width: 10%;
-    min-width: 100px;
-    background-image: url('/mvc_project1/view/img/fondo.png');
-    box-shadow: 30px 0px 50px -15px black;
+.login-header{
+    height: 8em;
+    background-image: url('/addressBook/view/img/fondo.png');
 }
 .project-title{
-    position: absolute;
-    bottom: 0px;
-    margin: auto;
-    border: 1px solid yellow;
-    box-sizing: border-box;
+    font-size: 500%;
+    text-shadow: 0 0 15px white;
     font-family: 'Kaushan Script', cursive;
-    -webkit-transform: rotate(-90deg);
-    transform: rotate(-90deg);
+    text-align: center;
 }
-#login-right{
-    /*Div-Derecha*/
-    right: 0;
-    z-index: -1;
+.login-panel{
+    /*Etiqueta article contiene el form*/
+    margin-top: 100px;
 }
 #login-form{
-    /*Etiqueta form..Estilo box del formulario*/
-    margin: auto;
-    margin-top: 100px;
     text-align: center;
-    width: 90%;
 }
 #login-form-container{
     /*Div que contiene el formulario*/
-    background-repeat: no-repeat;
-    background-size: 100%;
     margin: auto;
     width: 400px;
     height: 300px;
@@ -121,10 +101,9 @@ button{
 }
 #login-title{
     /*Titulo 'Iniciar Sesion' del formulario*/
-    background-image: url('/mvc_project1/view/img/fondo.png');
+    background-image: url('/addressBook/view/img/fondo.png');
     font-family: 'Kaushan Script', cursive;
     font-weight: bolder;
-    margin: 0;
     margin-bottom: 40px;
     padding: 10px;
 }
@@ -158,13 +137,12 @@ i.log-i{
 /*---------Estilo para frmMain.php---------*/
 /*body del archivo frmMain.php*/
 #main{
-    background-image: url('/mvc_project1/view/img/background2.png');
+    background-image: url('/addressBook/view/img/background2.png');
 }
-header > h1{
+.main-title{
     text-align: center;
     font-family: 'Kaushan Script', cursive;
     font-size: 5em;
-    margin: 0;
     text-shadow: 10px 10px 15px #666;
 }
 /*Etiqueta section del frmMain. Contenedor principal*/
@@ -176,7 +154,7 @@ header > h1{
     box-shadow: 0px 25px 50px -15px black;
 }
 #main-tabs > nav{
-    background-image: url('/mvc_project1/view/img/fondo.png');
+    background-image: url('/addressBook/view/img/fondo.png');
     height: 80px;
 }
 #main-menu > li{

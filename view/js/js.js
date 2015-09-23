@@ -152,7 +152,7 @@ function ajaxResponse(form,response) {
     switch (form.attr('name')) {
         case "frmLogin":
             if (response){
-                window.location = "/mvc_project1/view/forms/frmMain.php";
+                window.location = "/addressBook/view/forms/frmMain.php";
             }else{
                 $("#login-form-container").effect("shake",{times:3, distance:50},400);
                 alert("Nombre de usuario o contraseña incorrecta!");
@@ -232,7 +232,7 @@ function saveChanges(data){
             $(".save-table").html("<i class='fa fa-spinner fa-pulse'></i>Guardando...");
         },
         type: 'POST',
-        url: "/mvc_project1/controller/main.controller.php",
+        url: "/addressBook/controller/main.controller.php",
         data: "form=frmExecUpdate&data="+data,
         success: function (response) {
             setTimeout(function(){

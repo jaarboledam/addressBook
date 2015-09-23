@@ -2,12 +2,12 @@
 include 'layout.php';
 session_start();
 if(empty($_SESSION['login'])){
-    header("Location: /mvc_project1/index.php");
+    header("Location: /addressBook/index.php");
 }
 ?>
 <body id="main">
     <header>
-        <h1>Contactos</h1>
+        <h1 class="main-title">Contactos</h1>
     </header>
     <section id="main-tabs">
         <nav>
@@ -37,7 +37,7 @@ if(empty($_SESSION['login'])){
                     </a>
                 </li>
                 <li class="signOut">
-                    <a href="/mvc_project1/model/logout.php">
+                    <a href="/addressBook/model/logout.php">
                         <i class="fa fa-times-circle fa-2x" title="Cerrar Sesión"></i>
                     </a>
                 </li>

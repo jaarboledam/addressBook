@@ -1,4 +1,4 @@
-<form name="frmDeleteContact" action="/mvc_project1/controller/main.controller.php" method="POST">
+<form name="frmDeleteContact" action="/addressBook/controller/main.controller.php" method="POST">
     <ul class="form-list ul-frm-v2">
         <li>
             <input type="radio" name="radio-filter" class="radbtn" value="name" checked="">

@@ -1,10 +1,10 @@
 <?php include 'layout.php'; ?>
 <body id="login">
-    <div class="login-panel" id="login-left">
+    <header class="login-header">
         <h1 class="project-title">Address Book</h1>
-    </div>
-    <div class="login-panel" id="login-right">
-        <form id="login-form" name="frmLogin" action="/mvc_project1/controller/login.controller.php" method="POST">
+    </header>
+    <article class="login-panel">
+        <form id="login-form" name="frmLogin" action="/addressBook/controller/login.controller.php" method="POST">
             <div id="login-form-container">
                 <h1 id="login-title">Iniciar Sesión</h1>
                 <ul class="form-list">
@@ -23,5 +23,5 @@
             </div>
         </form>
         <div class="msgBox" id="login-msgBox"></div>
-    </div>
+    </article>
 </body>

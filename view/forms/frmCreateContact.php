@@ -1,4 +1,4 @@
-<form name="frmCreateContact" action="/mvc_project1/controller/main.controller.php" method="POST" autocomplete="off">
+<form name="frmCreateContact" action="/addressBook/controller/main.controller.php" method="POST" autocomplete="off">
     <ul class="form-list form-rows">
         <li>
             <i class="form-i fa fa-user fa-2x"></i>
