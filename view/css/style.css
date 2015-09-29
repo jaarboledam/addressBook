@@ -1,9 +1,6 @@
 @charset "utf-8";
-@import url(http://fonts.googleapis.com/css?family=Kaushan+Script);
-@font-face{
-    font-family: Roboto;
-    src: url('../fonts/Roboto-Thin.ttf');
-}
+@import url(https://fonts.googleapis.com/css?family=Peralta);
+@import url(https://fonts.googleapis.com/css?family=Lato:400,700);
 
 /*---------Estilo General---------*/
 *{
@@ -20,13 +17,13 @@
     border: none;
     background-color: rgba(0,0,0,0.1);
     color: black;
-    font-family: Roboto, monospace, sans-serif;
+    font-family: 'Lato', monospace, sans-serif;
     border-bottom: 4px solid transparent;
     transition: 0.3s;
     font-weight: bolder;
 }
 .txt-field:focus{
-    border-bottom: 4px solid #E65100;
+    border-bottom: 4px solid rgb(217, 30, 24);
     background-color: transparent;
 }
 ::-webkit-input-placeholder{
@@ -45,10 +42,10 @@
 }
 .i-active{
     transition: 0.3s;
-    color: #E65100 !important;
+    color: rgb(217, 30, 24) !important;
 }
 button{
-    font-family: Roboto, monospace, sans-serif;
+    font-family: 'Lato', monospace, sans-serif;
     font-weight: bold;
     border: none;
     cursor: pointer;
@@ -74,20 +71,24 @@ button{
 /*body del archivo frmLogin.php*/
 body#login{
     display: none;
+    background-image: url('/addressBook/view/img/bokeh.jpg');
+    background-size: 100%;
 }
 .login-header{
     height: 8em;
-    background-image: url('/addressBook/view/img/fondo.png');
+    background-color: rgba(0,0,0,0.2);
 }
 .project-title{
     font-size: 500%;
-    text-shadow: 0 0 15px white;
-    font-family: 'Kaushan Script', cursive;
+    font-family: 'Peralta', cursive;
+    letter-spacing: 2px;
     text-align: center;
+    color: rgba(0,0,0,0.7);
+    text-shadow: 0px 5px rgba(255,255,255,0.3);
 }
 .login-panel{
     /*Etiqueta article contiene el form*/
-    margin-top: 100px;
+    margin-top: 30px;
 }
 #login-form{
     text-align: center;
@@ -95,24 +96,24 @@ body#login{
 #login-form-container{
     /*Div que contiene el formulario*/
     margin: auto;
-    width: 400px;
-    height: 300px;
-    box-shadow: 0px 10px 25px 0px black;
+    width: 500px;
+    height: 400px;
+    background-color: rgba(255,255,255,0.2);
 }
 #login-title{
     /*Titulo 'Iniciar Sesion' del formulario*/
-    background-image: url('/addressBook/view/img/fondo.png');
-    font-family: 'Kaushan Script', cursive;
-    font-weight: bolder;
+    background-color: rgba(0,0,0,0.8);
+    font-family: 'Peralta', cursive;
+    color: rgba(255,255,255,0.8);
     margin-bottom: 40px;
-    padding: 10px;
+    padding: 30px;
 }
 #btnLogin{
-    background-color: #E76117;
+    background-color: rgb(217, 30, 24);
     margin-top: 10px;
     font-size: 14pt;
     letter-spacing: -1px;
-    box-shadow: 0px 6px #BF360C;
+    box-shadow: 0px 6px rgb(133, 18, 15);
     width: 50%;
     color: black;
     height: 40px;
@@ -120,8 +121,8 @@ body#login{
 }
 #btnLogin:hover, #btnLogin:focus{
     margin-top: 12px;
-    box-shadow: 0px 4px #BF360C;
-    background-color: #E45000;
+    box-shadow: 0px 4px rgb(133, 18, 15);
+    background-color: rgb(217, 30, 24);
     outline: none;
 }
 #btnLogin:active{
@@ -141,7 +142,7 @@ i.log-i{
 }
 .main-title{
     text-align: center;
-    font-family: 'Kaushan Script', cursive;
+    font-family: 'Lato', cursive;
     font-size: 5em;
     text-shadow: 10px 10px 15px #666;
 }
@@ -176,7 +177,7 @@ i.log-i{
 }
 /*Botones del menÃº*/
 a.tab-menu{
-    font-family: 'Kaushan Script', cursive;
+    font-family: 'Lato', cursive;
     display: block;
     text-decoration: none;
     text-align: center;
@@ -269,7 +270,7 @@ i.form-i{
 /*tabla para mostrar resultados en result-view*/
 nav.table-menu{
     display: none;
-    font-family: Roboto, monospace, sans-serif;
+    font-family: 'Lato', monospace, sans-serif;
     width: 100%;
     height: 20px;
 }
@@ -283,7 +284,7 @@ nav.table-menu{
 .table-view{
     width: 100%;
     border-collapse: collapse;
-    font-family: Roboto, monospace, sans-serif;
+    font-family: 'Lato', monospace, sans-serif;
 }
 .table-view th{
     background-color: #FF5722;
