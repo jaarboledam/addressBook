@@ -53,6 +53,14 @@ $(document).ready(function () {
             $(this).children("i").removeClass("i-active");
         }
     });
+    
+    //Color de fondo para el icono cuando el txt tiene foco
+    $(".log-t").on("focus",function (){
+        $(this).siblings("i").addClass("active-log-i");
+    });
+    $(".log-t").on("blur",function (){
+        $(this).siblings("i").removeClass("active-log-i");
+    });
 
     /*Aplica el estilo selected al boton del menu clickeado
      * y ejecuta la funcion showForm*/
@@ -248,46 +256,5 @@ function saveChanges(data){
         }
     });
 }
-
-/*Funcion especifica para el comportamiento de los iconos
- * que hacen de radio en la tabla de edicion*/
-/*function radios() {
-    var table_row = $(".table-view tr");
-    var rad_icon = $(".radio-select > i");
-    
-    table_row.children().on('mouseover', function () {
-        $(this).parent().addClass("active-tr");
-    });
-    table_row.children().on('mouseout', function () {
-        $(this).parent().removeAttr("class");
-    });
-    
-    table_row.on('click',function (){
-        var item = $(this).find(".rad");
-        
-        if (item.hasClass("fa-check-circle")) {
-            item.removeClass("fa-check-circle");
-        } else {
-            $(".radio-select i").removeClass("fa-check-circle");
-            item.removeClass("fa-circle");
-            $(".radio-select i").addClass("fa-circle-o");
-            item.removeClass("fa-circle-o");
-            item.addClass("fa-check-circle");
-        }
-    });
-
-    rad_icon.on('mouseover', function() {
-        if (!$(this).hasClass("fa-check-circle")) {
-            $(this).removeClass("fa-circle-o");
-            $(this).addClass("fa-circle");
-        }
-    });
-    rad_icon.on('mouseout', function() {
-        if (!$(this).hasClass("fa-check-circle")) {
-            $(this).removeClass("fa-circle");
-            $(this).addClass("fa-circle-o");
-        }
-    });
-}*/
                             
                          
