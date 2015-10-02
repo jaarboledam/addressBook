@@ -7,6 +7,9 @@
     margin: 0;
     padding: 0;
 }
+.txt-field::-webkit-input-placeholder { color: rgba(0,0,0,0.7); }
+.txt-field::-moz-placeholder { color: rgba(0,0,0,0.7); }
+.txt-field:-ms-input-placeholder { color: rgba(0,0,0,0.7); }
 .form-list{
     list-style: none;
 }
@@ -15,7 +18,7 @@
     font-size: 18pt;
     outline: 0;
     border: none;
-    background-color: rgba(0,0,0,0.1);
+    background-color: rgba(0,0,0,0.07);
     color: black;
     font-family: 'Lato', monospace, sans-serif;
     border-bottom: 4px solid transparent;
@@ -23,7 +26,7 @@
     font-weight: bolder;
 }
 .txt-field:focus{
-    border-bottom: 4px solid rgb(217, 30, 24);
+    border-bottom: 4px solid rgba(217, 30, 24,0.7);
     background-color: transparent;
 }
 
@@ -37,7 +40,7 @@
 }
 .i-active{
     transition: 0.3s;
-    color: rgb(217, 30, 24) !important;
+    color: rgba(217, 30, 24,0.8) !important;
 }
 button{
     font-family: 'Lato', monospace, sans-serif;
@@ -153,27 +156,23 @@ footer{
 /*---------Estilo para frmMain.php---------*/
 /*body del archivo frmMain.php*/
 #main{
-    background-image: url('/addressBook/view/img/background2.png');
+    background: url('/addressBook/view/img/telephone_booth.jpg');
 }
 .main-title{
     position: fixed;
     bottom: 0px;
-    text-align: center;
     font-family: 'Peralta', cursive;
     font-size: 5em;
-    text-shadow: 10px 10px 15px #666;
+    color: rgba(0,0,0,0.8);
+    text-shadow: 0px 5px #666;
 }
 /*Etiqueta section del frmMain. Contenedor principal*/
 #main-tabs{
-    background-color: #eee;
+    background-color: rgba(255,255,255,0.5);
     margin: auto;
-    width: 850px;
+    width: 65%;
+    min-width: 770px;
     height: 600px;
-    box-shadow: 0px 25px 50px -15px black;
-}
-#main-tabs > nav{
-    background: rgb(217, 30, 24);
-    height: 80px;
 }
 #main-menu > li{
     width: 20%;
@@ -186,11 +185,11 @@ footer{
     text-align: right;
 }
 .signOut > a{
-    color: black;
+    color: rgba(255,255,255,0.5);
     transition: all .35s ease;
 }
 .signOut > a:hover{
-    color: white;
+    color: rgba(217, 30, 24,0.7);
 }
 /*Botones del menÃº*/
 a.tab-menu{
@@ -198,24 +197,24 @@ a.tab-menu{
     display: block;
     text-decoration: none;
     text-align: center;
-    color: black;
+    color: rgba(255,255,255,0.7);
     font-weight: bolder;
     font-size: 20pt;
     width: 100%;
-    transition: 0.4s;
+    transition: .25s;
     cursor: pointer;
-    padding: 22px 0px;
+    padding: 20px 0px;
 }
 a.tab-menu:hover{
-    background-color: #eee;
+    box-shadow: inset 0px 4px rgba(217, 30, 24,0.9);
 }
 .menu-selected{
-    background-color: #eee;
-    text-shadow: 5px 5px 10px #666;
+    box-shadow: inset 0px 5px rgba(217, 30, 24,0.9);
+    color: rgba(0,0,0,0.7)!important;
 }
 /*Iconos de los botones*/
 i.main-i{
-    color: #eee;
+    color: rgba(255,255,255,0.5);
     font-size: 90%;
 }
 /*Texto de los botones*/
@@ -249,25 +248,26 @@ y darles margenes*/
 }
 /*Iconos de los formularios*/
 i.form-i{
+    color: rgba(0,0,0,0.7);
     text-align: center;
     width: 40px;
     height: 40px;
 }
 /*Botones de los formularios*/
 .form-btn{
-    background: #D6D6D6;
+    background-color: rgba(217, 30, 24,0.8);
+    font-size: 14pt;
+    box-shadow: 0px 5px rgb(133, 18, 15);
     margin-top: 50px !important;
-    font-size: 1.5em;
     width: 200px;
     height: 60px;
-    border-bottom: 4px solid gray;
-    border-radius: 4px 4px 8px 8px;
 }
 .form-btn:hover{
+    box-shadow: 0px 4px rgb(133, 18, 15);
+    background-color: rgb(217, 30, 24);
+    outline: none;
     color: white;
     text-shadow: 0px 0px 15px white;
-    background-color: #FF5722 !important;
-    border-bottom: 4px solid #BF360C;
 }
 .form-btn:focus{
     color: white;
