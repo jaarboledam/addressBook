@@ -2,6 +2,6 @@
 
 session_start();
 session_destroy();
-header('Location: /mvc_project1/index.php');
+header('Location: /addressBook/index.php');
 exit();
 

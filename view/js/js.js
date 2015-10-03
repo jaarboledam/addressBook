@@ -53,6 +53,14 @@ $(document).ready(function () {
             $(this).children("i").removeClass("i-active");
         }
     });
+    
+    //Color de fondo para el icono cuando el txt tiene foco
+    $(".log-t").on("focus",function (){
+        $(this).siblings("i").addClass("active-log-i");
+    });
+    $(".log-t").on("blur",function (){
+        $(this).siblings("i").removeClass("active-log-i");
+    });
 
     /*Aplica el estilo selected al boton del menu clickeado
      * y ejecuta la funcion showForm*/
@@ -69,11 +77,12 @@ $(document).ready(function () {
     $(".close-table").click(function() {
         switch ($(this).attr("id")){
             case "edit-close":
-                $("#edit-view").hide("slow");
-                $(".table-menu").hide('slow');
+                $("#edit-view").slideUp("fast");
+                $("#ed").hide('slow');
                 break;
             case "ro-close":
-                $("#ro-view").hide("slow");
+                $("#ro-view").slideUp("fast");
+                $("#ro").hide('slow');
                 break;
         }
     });
@@ -152,7 +161,7 @@ function ajaxResponse(form,response) {
     switch (form.attr('name')) {
         case "frmLogin":
             if (response){
-                window.location = "/mvc_project1/view/forms/frmMain.php";
+                window.location = "/addressBook/view/forms/frmMain.php";
             }else{
                 $("#login-form-container").effect("shake",{times:3, distance:50},400);
                 alert("Nombre de usuario o contraseña incorrecta!");
@@ -184,7 +193,8 @@ function ajaxResponse(form,response) {
                     tbody.append('</tr>');
                     i++;
                 };
-                $("#ro-view").fadeIn('slow');
+                $("#ro-view").slideDown('fast');
+                $("#ro").show('slow');
             }
             else{
                 alert("El contacto no ha sido encontrado!")
@@ -212,8 +222,8 @@ function ajaxResponse(form,response) {
                     tbody.append('</tr>');
                     i++;
                 };
-                $("#edit-view").fadeIn('slow');
-                $(".table-menu").fadeIn('slow');
+                $("#edit-view").slideDown('fast');
+                $("#ed").show('slow');
             }
             else{
                 alert("El contacto no ha sido encontrado!");
@@ -232,7 +242,7 @@ function saveChanges(data){
             $(".save-table").html("<i class='fa fa-spinner fa-pulse'></i>Guardando...");
         },
         type: 'POST',
-        url: "/mvc_project1/controller/main.controller.php",
+        url: "/addressBook/controller/main.controller.php",
         data: "form=frmExecUpdate&data="+data,
         success: function (response) {
             setTimeout(function(){
@@ -248,46 +258,5 @@ function saveChanges(data){
         }
     });
 }
-
-/*Funcion especifica para el comportamiento de los iconos
- * que hacen de radio en la tabla de edicion*/
-/*function radios() {
-    var table_row = $(".table-view tr");
-    var rad_icon = $(".radio-select > i");
-    
-    table_row.children().on('mouseover', function () {
-        $(this).parent().addClass("active-tr");
-    });
-    table_row.children().on('mouseout', function () {
-        $(this).parent().removeAttr("class");
-    });
-    
-    table_row.on('click',function (){
-        var item = $(this).find(".rad");
-        
-        if (item.hasClass("fa-check-circle")) {
-            item.removeClass("fa-check-circle");
-        } else {
-            $(".radio-select i").removeClass("fa-check-circle");
-            item.removeClass("fa-circle");
-            $(".radio-select i").addClass("fa-circle-o");
-            item.removeClass("fa-circle-o");
-            item.addClass("fa-check-circle");
-        }
-    });
-
-    rad_icon.on('mouseover', function() {
-        if (!$(this).hasClass("fa-check-circle")) {
-            $(this).removeClass("fa-circle-o");
-            $(this).addClass("fa-circle");
-        }
-    });
-    rad_icon.on('mouseout', function() {
-        if (!$(this).hasClass("fa-check-circle")) {
-            $(this).removeClass("fa-circle");
-            $(this).addClass("fa-circle-o");
-        }
-    });
-}*/
                             
                          

@@ -1,37 +1,37 @@
 @charset "utf-8";
-@import url(http://fonts.googleapis.com/css?family=Kaushan+Script);
-@font-face{
-    font-family: Roboto;
-    src: url('../fonts/Roboto-Thin.ttf');
-}
+@import url(https://fonts.googleapis.com/css?family=Peralta);
+@import url(https://fonts.googleapis.com/css?family=Lato:400,700);
+
+/*MAIN COLOR: Crimson(Scarlet) rgba(217, 30, 24,0.8), darker rgb(133, 18, 15)*/
 
 /*---------Estilo General---------*/
+*{
+    margin: 0;
+    padding: 0;
+}
+.txt-field::-webkit-input-placeholder { color: rgba(0,0,0,0.7); }
+.txt-field::-moz-placeholder { color: rgba(0,0,0,0.7); }
+.txt-field:-ms-input-placeholder { color: rgba(0,0,0,0.7); }
 .form-list{
     list-style: none;
-    padding: 0;
 }
 .txt-field{
     /*Estilo general para los campos de texto*/
     font-size: 18pt;
     outline: 0;
     border: none;
-    background-color: rgba(0,0,0,0.1);
+    background-color: rgba(0,0,0,0.07);
     color: black;
-    font-family: Roboto, monospace, sans-serif;
+    font-family: 'Lato', monospace, sans-serif;
     border-bottom: 4px solid transparent;
     transition: 0.3s;
     font-weight: bolder;
 }
 .txt-field:focus{
-    border-bottom: 4px solid #E65100;
+    border-bottom: 4px solid rgba(217, 30, 24,0.7);
     background-color: transparent;
 }
-::-webkit-input-placeholder{
-    color: black;
-}
-::-moz-placeholder{
-    color: black;
-}
+
 .li-txt{
     margin: 20px;
 }
@@ -42,142 +42,132 @@
 }
 .i-active{
     transition: 0.3s;
-    color: #E65100 !important;
+    color: rgba(217, 30, 24,0.8) !important;
 }
 button{
-    font-family: Roboto, monospace, sans-serif;
+    font-family: 'Lato', monospace, sans-serif;
     font-weight: bold;
     border: none;
     cursor: pointer;
     outline: 0;
-}
-.msgBox{
-    background-image: url('/mvc_project1/view/img/box-error.png');
-    margin: auto;
-    width: 300px;
-    padding-top: 10px;
-    margin-top: 20px;
-    text-align: center;
-    font-size: 20pt;
-    font-weight: bold;
-    letter-spacing: 1px;
-    display: none;
-    box-shadow: 0px 28px 25px -25px black;
 }
 
 /*---------Fin estilos---------*/
 
 /*---------Estilo para frmLogin.php---------*/
 /*body del archivo frmLogin.php*/
-#login{
+body#login{
     display: none;
-    background-color: #eee;
-    font-family: 'Kaushan Script', cursive;
+    background: url('/addressBook/view/img/bokeh.jpg');
+    background-size: 100%;
 }
-.login-panel{
-    /*Divs que dividen el index en 2 partes verticales*/
-    position: absolute;
-    top: 5px; bottom: 5px;
-    width: 50%;
-}
-#login-left{
-    /*Div-izquierda*/
-    left: 5px;
-    width: 10%;
-    min-width: 100px;
-    background-image: url('/mvc_project1/view/img/fondo.png');
-    box-shadow: 30px 0px 50px -15px black;
+.login-header{
+    height: 4em;
+    background-color: rgba(255,255,255,0.2);
 }
 .project-title{
-    position: absolute;
-    bottom: 0px;
-    margin: auto;
-    border: 1px solid yellow;
-    box-sizing: border-box;
-    font-family: 'Kaushan Script', cursive;
-    -webkit-transform: rotate(-90deg);
-    transform: rotate(-90deg);
+    font-size: 400%;
+    font-family: 'Peralta', cursive;
+    letter-spacing: 2px;
+    margin-left: 30px;
+    color: rgba(0,0,0,0.8);
+    text-shadow: 0px -5px rgba(255,255,255,0.3);
 }
-#login-right{
-    /*Div-Derecha*/
-    right: 0;
-    z-index: -1;
+.login-panel{
+    /*Etiqueta article contiene el form*/
+    margin-top: 30px; 
 }
 #login-form{
-    /*Etiqueta form..Estilo box del formulario*/
-    margin: auto;
-    margin-top: 100px;
     text-align: center;
-    width: 90%;
 }
+.log-t{
+    background-color: rgba(255,255,255,0.3)!important;
+    width: 60%;
+    height: 56px;
+    padding-left: 10px;
+    margin-left: -4px;
+    color: rgba(0,0,0,0.7);
+}
+.log-t:focus{
+    border-color: transparent!important;
+    background-color: rgba(255,255,255,0.5)!important;
+}
+.log-t::-webkit-input-placeholder { color: rgba(0,0,0,0.7); }
+.log-t::-moz-placeholder { color: rgba(0,0,0,0.7); }
+.log-t:-ms-input-placeholder { color: rgba(0,0,0,0.7); }
 #login-form-container{
     /*Div que contiene el formulario*/
-    background-repeat: no-repeat;
-    background-size: 100%;
     margin: auto;
-    width: 400px;
-    height: 300px;
-    box-shadow: 0px 10px 25px 0px black;
+    width: 500px;
+    height: 450px;
+    background-color: rgba(255,255,255,0.2);
 }
 #login-title{
     /*Titulo 'Iniciar Sesion' del formulario*/
-    background-image: url('/mvc_project1/view/img/fondo.png');
-    font-family: 'Kaushan Script', cursive;
-    font-weight: bolder;
-    margin: 0;
+    background-color: rgba(255,255,255,0.3);
+    font-family: 'Peralta', cursive;
+    font-size: 200%;
+    color: rgba(217, 30, 24,0.7);
+    text-shadow: 1px 1px rgba(0,0,0,0.5);
     margin-bottom: 40px;
-    padding: 10px;
+    padding: 30px;
+    border-bottom: 4px solid rgba(217, 30, 24,0.7);
 }
 #btnLogin{
-    background-color: #E76117;
-    margin-top: 10px;
+    margin-top: 25px; 
+    letter-spacing: 1px!important;
+    background-color: rgb(217, 30, 24);
     font-size: 14pt;
-    letter-spacing: -1px;
-    box-shadow: 0px 6px #BF360C;
-    width: 50%;
+    box-shadow: 0px 6px rgb(133, 18, 15);
+    width: 50%;g
     color: black;
     height: 40px;
-    border-radius: 2px 2px 5px 5px;
 }
 #btnLogin:hover, #btnLogin:focus{
-    margin-top: 12px;
-    box-shadow: 0px 4px #BF360C;
-    background-color: #E45000;
+    margin-top: 27px;
+    box-shadow: 0px 4px rgb(133, 18, 15);
+    background-color: rgb(217, 30, 24);
     outline: none;
 }
 #btnLogin:active{
-    margin-top: 16px;
+    margin-top: 29px;
     box-shadow: 0px 0px;
 }
 i.log-i{
+    background-color: rgba(255,255,255,0.3);
+    color: rgba(217, 30, 24,0.9);
+    padding: 10px;
     width: 40px;
     height: 40px;
+    transition: all .25s ease;
+}
+.active-log-i{
+    box-shadow: inset 60px 0px rgba(217, 30, 24,0.9);
+    color: rgba(0,0,0,0.7)!important;
+}
+footer{
+    position: fixed;
+    bottom: 5px;
+    width: 100%;
+    height: 4em;
+    background-color: rgba(255,255,255,0.1);
+    padding: 5px;
 }
 /*---------Fin estilos---------*/
 
 /*---------Estilo para frmMain.php---------*/
 /*body del archivo frmMain.php*/
 #main{
-    background-image: url('/mvc_project1/view/img/background2.png');
-}
-header > h1{
-    text-align: center;
-    font-family: 'Kaushan Script', cursive;
-    font-size: 5em;
-    margin: 0;
-    text-shadow: 10px 10px 15px #666;
+    background: url('/addressBook/view/img/telephone_booth.jpg');
 }
 /*Etiqueta section del frmMain. Contenedor principal*/
 #main-tabs{
-    background-color: #eee;
+    background-color: rgba(255,255,255,0.5);
     margin: auto;
-    width: 850px;
-    height: 600px;
-    box-shadow: 0px 25px 50px -15px black;
-}
-#main-tabs > nav{
-    background-image: url('/mvc_project1/view/img/fondo.png');
-    height: 80px;
+    margin-top: 2em;
+    padding-bottom: 2em;
+    width: 65%;
+    min-width: 770px;
 }
 #main-menu > li{
     width: 20%;
@@ -190,36 +180,36 @@ header > h1{
     text-align: right;
 }
 .signOut > a{
-    color: black;
+    color: rgba(255,255,255,0.5);
     transition: all .35s ease;
 }
 .signOut > a:hover{
-    color: white;
+    color: rgba(217, 30, 24,0.7);
 }
 /*Botones del menÃº*/
 a.tab-menu{
-    font-family: 'Kaushan Script', cursive;
+    font-family: 'Lato', cursive;
     display: block;
     text-decoration: none;
     text-align: center;
-    color: black;
+    color: rgba(255,255,255,0.7);
     font-weight: bolder;
     font-size: 20pt;
     width: 100%;
-    transition: 0.4s;
+    transition: .25s;
     cursor: pointer;
-    padding: 18px 0px;
+    padding: 20px 0px;
 }
 a.tab-menu:hover{
-    background-color: #eee;
+    box-shadow: inset 0px 4px rgba(217, 30, 24,0.9);
 }
 .menu-selected{
-    background-color: #eee;
-    text-shadow: 5px 5px 10px #666;
+    box-shadow: inset 0px 5px rgba(217, 30, 24,0.9);
+    color: rgba(0,0,0,0.7)!important;
 }
 /*Iconos de los botones*/
 i.main-i{
-    color: #eee;
+    color: rgba(255,255,255,0.5);
     font-size: 90%;
 }
 /*Texto de los botones*/
@@ -253,31 +243,26 @@ y darles margenes*/
 }
 /*Iconos de los formularios*/
 i.form-i{
+    color: rgba(0,0,0,0.7);
     text-align: center;
     width: 40px;
     height: 40px;
 }
 /*Botones de los formularios*/
 .form-btn{
-    background: #D6D6D6;
+    background-color: rgba(217, 30, 24,0.8);
+    font-size: 14pt;
     margin-top: 50px !important;
-    font-size: 1.5em;
     width: 200px;
     height: 60px;
-    border-bottom: 4px solid gray;
-    border-radius: 4px 4px 8px 8px;
+    transition: .25s ease;
 }
-.form-btn:hover{
+.form-btn:hover, .form-btn:focus{
+    box-shadow: 0px 4px rgb(133, 18, 15);
+    background-color: rgb(217, 30, 24);
+    outline: none;
     color: white;
     text-shadow: 0px 0px 15px white;
-    background-color: #FF5722 !important;
-    border-bottom: 4px solid #BF360C;
-}
-.form-btn:focus{
-    color: white;
-    text-shadow: 0px 0px 15px white;
-    background-color: #FF5722 !important;
-    border-bottom: 4px solid #BF360C;
 }
 .tab{
     display: none;
@@ -291,9 +276,12 @@ i.form-i{
 /*tabla para mostrar resultados en result-view*/
 nav.table-menu{
     display: none;
-    font-family: Roboto, monospace, sans-serif;
+    font-family: 'Lato', monospace, sans-serif;
     width: 100%;
     height: 20px;
+}
+.toolbar{
+    background: none!important;
 }
 .toolbar li{
     display: inline-block;
@@ -305,10 +293,10 @@ nav.table-menu{
 .table-view{
     width: 100%;
     border-collapse: collapse;
-    font-family: Roboto, monospace, sans-serif;
+    font-family: 'Lato', monospace, sans-serif;
 }
 .table-view th{
-    background-color: #FF5722;
+    background-color: rgb(217, 30, 24);
     font-size: 120%;
     padding: 5px 0px 5px 0px;
 }
@@ -317,28 +305,22 @@ nav.table-menu{
     font-size: 90%;
     min-width: 120px;
     transition: all .25s ease;
-    border-bottom: 1px solid gray;
+    border-bottom: 2px solid gray;
 }
 .table-view td:focus{
     background-color: #ccc;
     text-shadow: 0px 0px 15px black;
     outline: 0;
-    border-bottom: 1px solid #FF5722;
+    border-bottom: 2px solid rgb(217, 30, 24);
 }
 .table-view td:hover{
-    background-color: #ccc;
-}
-td.radio-select{
-    min-width: 0px !important;
+    background-color: rgba(217, 30, 24,0.8);
 }
 .table-view tr{
-    background-color: #FFCCBC;
+    background-color: rgba(255,255,255,0.5);
 }
 .table-view tr:nth-child(2n){
     background-color: #eee;
-}
-.active-tr{
-    background-color: #ccc !important;
 }
 .close-table:hover{
     color: red;
