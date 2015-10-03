@@ -16,16 +16,14 @@
         </li>
     </ul>
 </form>
+<nav class="table-menu" id="ro">
+    <ul class="form-list toolbar">
+        <li class="close-table" id="ro-close"><i class="fa fa-times-circle"></i>Cerrar</li>
+    </ul>
+</nav>
 <div class="result-view" id="ro-view">
     <table class="table-view" id="ro-table">
         <thead>
-            <tr>
-                <td class="toolbar">
-                    <span class="close-table" id="ro-close">
-                        <i class="fa fa-times-circle"></i>Cerrar
-                    </span>
-                </td>
-            </tr>
             <tr>
                 <th>Nombres</th>
                 <th>Apellidos</th>

@@ -77,11 +77,12 @@ $(document).ready(function () {
     $(".close-table").click(function() {
         switch ($(this).attr("id")){
             case "edit-close":
-                $("#edit-view").hide("slow");
-                $(".table-menu").hide('slow');
+                $("#edit-view").slideUp("fast");
+                $("#ed").hide('slow');
                 break;
             case "ro-close":
-                $("#ro-view").hide("slow");
+                $("#ro-view").slideUp("fast");
+                $("#ro").hide('slow');
                 break;
         }
     });
@@ -192,7 +193,8 @@ function ajaxResponse(form,response) {
                     tbody.append('</tr>');
                     i++;
                 };
-                $("#ro-view").fadeIn('slow');
+                $("#ro-view").slideDown('fast');
+                $("#ro").show('slow');
             }
             else{
                 alert("El contacto no ha sido encontrado!")
@@ -220,8 +222,8 @@ function ajaxResponse(form,response) {
                     tbody.append('</tr>');
                     i++;
                 };
-                $("#edit-view").fadeIn('slow');
-                $(".table-menu").fadeIn('slow');
+                $("#edit-view").slideDown('fast');
+                $("#ed").show('slow');
             }
             else{
                 alert("El contacto no ha sido encontrado!");

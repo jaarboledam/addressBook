@@ -6,9 +6,6 @@ if(empty($_SESSION['login'])){
 }
 ?>
 <body id="main">
-    <header>
-        <h1 class="main-title">Contactos</h1>
-    </header>
     <section id="main-tabs">
         <nav>
             <ul class="form-list" id="main-menu">

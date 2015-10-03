@@ -16,7 +16,7 @@
         </li>
     </ul>
 </form>
-<nav class="table-menu">
+<nav class="table-menu" id="ed">
     <ul class="form-list toolbar">
         <li class="close-table" id="edit-close"><i class="fa fa-times-circle"></i>Cerrar</li>
         <li class="save-table"><i class="fa fa-floppy-o"></i>Guardar</li>
